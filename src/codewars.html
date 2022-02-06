@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function solution(str) {
+        return str.split('').reverse().join('')
+    }
+
+    function boolToWord( bool ){
+        return bool ? 'Yes' : 'No'
+    }
+
+    function numberToString(num) {
+        return num.toString()
+    }
+
+    function summation (num) {
+        let sum = 0
+        for(let i = 0; i <= num; i++) {
+            sum += i
+        }
+        return sum
+    }
+
+    function findSmallestInt(args) {
+        let smallest = args[0]
+
+        for(let i = 0; i < args.length; i++){
+            if(args[i] < smallest) smallest = args[i]
+        }
+
+        return smallest
+    }
+
+    console.log(findSmallestInt([34, 15, 88, 2]))
+
+</script>
+
+</body>
+</html>
