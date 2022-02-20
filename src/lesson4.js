@@ -44,6 +44,13 @@ console.log(tasks['234yuya-231sd2'].find(t => t.id === '234yu123ya-231sqw'))// 3
 console.log(tasks[todoLists[0].id].find(t => t.id === '234yu123ya-231sqw'))
 
 // .reduce
+
+const numbers = [1, 2, 3, 4, 5, 6]
+
+console.log(numbers.reduce((acc, el) => acc + el, 10))  // 10 = стартовое значение, можно не писать если не нужно, тогда стартовым значением будет первый el массива
+
+console.log(numbers.reduce((acc, el) => acc > el ? acc : el))
+
 const students = [
     {
         name: "Bob",
@@ -70,7 +77,18 @@ const students = [
         scores: 100
     },
 ];
+console.log(students.reduce((acc, el) => acc + el.scores, 0))
 
-const numbers = [1, 2, 3, 4, 5, 6]
+console.log(students.reduce((acc, el) => {
+    if(el.name === 'John') {
+        acc = el.name
+    }
+    return acc
+}, 'John is not find'))
 
-//console.log(numbers.reduce())
+console.log(students.reduce((acc, el) => {
+    if(el.scores >= 100) {
+        acc.push(el)
+    }
+    return acc
+}, []))
